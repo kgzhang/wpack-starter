@@ -1,0 +1,20 @@
+{
+  "name": "form-drag",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@wpackio/scripts": "^2.13.0",
+    "fork-ts-checker-webpack-plugin": "^1.0.1",
+    "node-sass": "^4.11.0",
+    "typescript": "^3.4.1"
+  },
+  "scripts": {
+    "bootstrap": "wpackio-scripts bootstrap",
+    "build": "wpackio-scripts build",
+    "start": "wpackio-scripts start",
+    "archive": "wpackio-scripts pack"
+  },
+  "dependencies": {
+    "@wpackio/entrypoint": "^2.12.0"
+  }
+}
