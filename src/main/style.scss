@@ -1,0 +1,214 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+
+.questions {
+    min-width: 200px;
+}
+
+.outer {
+    height: 100vh;
+    width: 100vw;
+    transition: all 0.3s ease-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background: hsl(0, 0%, 99%);
+
+    &.show {
+        z-index: 10;
+        opacity: 1;
+        > div {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    &.hidden {
+        pointer-events: none;
+        opacity: 0;
+        z-index: 100;
+        > div {
+          opacity: 0;
+          transform: translateY(100px);
+        }
+    }
+}
+
+.inner {
+    transition: all 0.4s ease-out;
+}
+
+.list {
+    padding:8px;
+    min-height: 400px;
+    flex-grow: 1;
+    margin-bottom: 24px;
+    height: 100%;
+    justify-content: space-between;
+    background-color: hsl(0, 0%, 95%);
+    &.hover {
+        background-color: hsl(120, 50%, 70%);
+    }
+}
+
+.form-wrapper {
+    width: 100%;
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.button {
+    background: #0085ff;
+    padding: 8px 16px;
+    margin-top: 12px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 0 2px 4px hsl(240, 10%, 80%);
+}
+
+
+.item {
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    &.item-selected {
+        position: relative;
+        padding-right: 16px;
+    }
+    background-color: hsl(240, 10%, 90%);
+    &.dragging {
+        background-color: hsl(120, 40%, 60%);
+    }
+}
+
+.arrange {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div {
+        width: 20px;
+        height: 20px;
+        margin-left: 16px;
+    }
+}
+
+.handler {
+    user-select: none;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input-group {
+    margin-bottom: 24px;
+}
+
+.label {
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.input {
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: hsl(0, 0%, 80%);
+    background-color: hsl(0, 0%, 98%);
+    appearance: none;
+    box-sizing: border-box;
+    font-size: 1em;
+
+
+    &:active,
+    &:focus {
+        background-color: hsl(0, 0%, 98%);
+        border-color: hsl(0, 0%, 40%);
+    }
+
+    &.text {
+        padding-right: 24px;
+    }
+
+    &.textarea {
+        min-height: 100px;
+    }
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    svg {
+        width: 20px;
+        height: 20px;
+        margin-left: -28px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+.modal-form {
+    width: 400px;
+    height: 100px;
+}
+
+// modal 层的表格填写
+.extra-wrapper {
+    display: flex;
+    align-items:center;
+    margin: 0 -4px;
+    & > div {
+        margin: 0 4px;
+    }
+}
+
+
+.handle-button {
+    background: #0086ff;
+    padding: 3px 6px;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 1;
+    border: none;
+    color: white;
+    cursor: pointer;
+    &:hover,
+    &:active {
+        outline: none;
+    }
+}

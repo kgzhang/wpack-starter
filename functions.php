@@ -11,7 +11,7 @@ function wp_theme_scripts()
      * @var \WPackio\Enqueue
      */
     global $enqueue;
-    $enqueue->enqueue('theme', 'main', []);
+    $enqueue->enqueue('theme', 'main', ['in_footer' => false]);
 }
 
 add_action('wp_enqueue_scripts', 'wp_theme_scripts');

@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "@types/classnames": "^2.2.7",
+    "@types/lodash.debounce": "^4.0.6",
+    "@types/react": "^16.8.10",
+    "@types/react-beautiful-dnd": "^10.1.1",
+    "@types/react-dom": "^16.8.3",
     "@wpackio/scripts": "^2.13.0",
     "fork-ts-checker-webpack-plugin": "^1.0.1",
     "node-sass": "^4.11.0",
@@ -15,6 +20,11 @@
     "archive": "wpackio-scripts pack"
   },
   "dependencies": {
-    "@wpackio/entrypoint": "^2.12.0"
+    "@wpackio/entrypoint": "^2.12.0",
+    "classnames": "^2.2.6",
+    "lodash.debounce": "^4.0.8",
+    "react": "^16.8.6",
+    "react-beautiful-dnd": "^11.0.0-beta",
+    "react-dom": "^16.8.6"
   }
 }

@@ -22,28 +22,21 @@ module.exports = {
 		{
 			name: 'theme',
 			entry: {
-				main: './src/main/index.ts'
+				main: './src/main/index.tsx'
 			},
-			webpackConfig: undefined
+			webpackConfig: (config, api) => {
+				// Create a new config
+				const newConfig = {
+					...config
+				};
+
+				// console.log(newConfig, 'newConfig')
+				// hack 打包单个脚本Api
+				newConfig.output.filename = 'theme/drag.js';
+				newConfig.optimization = {}
+				return newConfig
+			}
 		}
-		// If this has length === 1, then single compiler
-		// {
-		// 	name: 'mobile',
-		// 	entry: {
-		// 		// mention each non-interdependent files as entry points
-		//      // The keys of the object will be used to generate filenames
-		//      // The values can be string or Array of strings (string|string[])
-		//      // But unlike webpack itself, it can not be anything else
-		//      // <https://webpack.js.org/concepts/#entry>
-		//      // You do not need to worry about file-size, because we would do
-		//      // code splitting automatically. When using ES6 modules, forget
-		//      // global namespace pollutions 😉
-		// 		vendor: './src/mobile/vendor.js', // Could be a string
-		// 		main: ['./src/mobile/index.js'], // Or an array of string (string[])
-		// 	},
-		// 	// Extra webpack config to be passed directly
-		// 	webpackConfig: undefined,
-		// },
 		// If has more length, then multi-compiler
 	],
 	// Output path relative to the context directory
